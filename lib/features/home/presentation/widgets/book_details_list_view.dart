@@ -1,7 +1,7 @@
 import 'package:bookly_app/core/widgets/custom_book_image.dart';
 import 'package:bookly_app/core/widgets/custom_error_widget.dart';
 import 'package:bookly_app/core/widgets/custom_loading_indicator.dart';
-import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
+import 'package:bookly_app/core/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/logic/similar_books_cubit/similar_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,7 +27,7 @@ class BookDetailsListView extends StatelessWidget {
                 return Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: CustomBookImage(
-                    bookModel: bookModel,
+                      bookModel: bookModel,
                       imgUrl: state
                               .books[index].volumeInfo?.imageLinks?.thumbnail ??
                           ''),
