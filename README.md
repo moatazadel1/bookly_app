@@ -1,6 +1,7 @@
 # bookly_app
 
-A new Flutter project.
+Mobile app integrated with Google Books API that can perform full-text searches and retrieve book information, viewability and eBook availability.
+Usage of Bloc and MVVM Pattern for clean code design, display variety of books with details such as author, average rating and number of pages and search between books.
 
 ## Getting Started
 
