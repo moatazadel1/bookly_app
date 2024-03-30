@@ -50,7 +50,8 @@ class HomeRepoImpl implements HomeRepo {
   Future<Either<Failure, List<BookModel>>> fetchSimilarBooks(
       {required String category}) async {
     try {
-      var data = await _apiService.get(endPoint: EndPoint.similarBooksUrl);
+      var data =
+          await _apiService.get(endPoint: EndPoint.similarBooksUrl + category);
       List<BookModel> books = [];
       for (var element in data['items']) {
         books.add(BookModel.fromJson(element));

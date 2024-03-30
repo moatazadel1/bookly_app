@@ -22,7 +22,7 @@ class CustomHomeAppBar extends StatelessWidget {
               GoRouter.of(context).push(AppRoutes.kSearchView);
             },
             child: Image.asset(
-              AppAssets.searchImg,
+              AppAssets.searchIcon,
               height: 25,
             ),
           ),

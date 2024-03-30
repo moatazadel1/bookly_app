@@ -7,45 +7,72 @@ import 'package:flutter/material.dart';
 class BookDetailsBodyView extends StatelessWidget {
   const BookDetailsBodyView({super.key, required this.bookModel});
   final BookModel bookModel;
+
   @override
+  // Widget build(BuildContext context) {
+  //   return CustomScrollView(
+  //     slivers: [
+  //       SliverFillRemaining(
+  //         child: Scaffold(
+  //           body: SafeArea(
+  //             child: Padding(
+  //               padding: const EdgeInsets.symmetric(horizontal: 30),
+  //               child: Column(
+  //                 children: [
+  //                   const CustomBookDetailsAppBar(),
+  //                   const SizedBox(
+  //                     height: 30,
+  //                   ),
+  //                   BookDetailsSection(
+  //                     bookModel: bookModel,
+  //                   ),
+  //                   // const Expanded(
+  //                   //   // Using Expanded Widget here to make the rest of widgets are in the bottom of screen regardless of the dimensions of the mobile.
+  //                   //   // The sizedBox widget will expand to make the rest of widgets in the bottom.
+  //                   //   child: SizedBox(
+  //                   //     height: 50,
+  //                   //   ),
+  //                   // ),
+  //                   BookSimilarSection(
+  //                     bookModel: bookModel,
+  //                   ),
+  //                   const SizedBox(
+  //                     height: 40,
+  //                   ),
+  //                 ],
+  //               ),
+  //             ),
+  //           ),
+  //         ),
+  //       )
+  //     ],
+  //   );
+  // }
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SliverFillRemaining(
-          hasScrollBody: false,
-          child: Scaffold(
-            body: SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: Column(
-                  children: [
-                    const CustomBookDetailsAppBar(),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    BookDetailsSection(
-                      bookModel: bookModel,
-                    ),
-                    const Expanded(
-                      // Using Expanded Widget here to make the rest of widgets are in the bottom of screen regardless of the dimensions of the mobile.
-                      // The sizedBox widget will expand to make the rest of widgets in the bottom.
-                      child: SizedBox(
-                        height: 50,
-                      ),
-                    ),
-                    BookSimilarSection(
-                      bookModel: bookModel,
-                    ),
-                    const SizedBox(
-                      height: 40,
-                    ),
-                  ],
-                ),
+    var pageSize = MediaQuery.of(context).size.height;
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: SizedBox(
+              height: pageSize,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const CustomBookDetailsAppBar(),
+                  const SizedBox(height: 30),
+                  BookDetailsSection(bookModel: bookModel),
+                  const Expanded(child: SizedBox(height: 50)),
+                  BookSimilarSection(bookModel: bookModel),
+                  const SizedBox(height: 40),
+                ],
               ),
             ),
           ),
-        )
-      ],
+        ),
+      ),
     );
   }
 }

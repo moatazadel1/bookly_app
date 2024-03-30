@@ -7,13 +7,14 @@ import 'package:go_router/go_router.dart';
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage(
       {super.key, required this.imgUrl, required this.bookModel});
-  final String imgUrl;
+  final String? imgUrl;
   final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
+        if (imgUrl == null) {}
         GoRouter.of(context).push(AppRoutes.kBookDetailsView, extra: bookModel);
       },
       child: AspectRatio(
@@ -21,7 +22,7 @@ class CustomBookImage extends StatelessWidget {
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: CachedNetworkImage(
-            imageUrl: imgUrl,
+            imageUrl: imgUrl ?? '',
             fit: BoxFit.cover,
             errorWidget: (context, url, error) => const Icon(Icons.error),
           ),

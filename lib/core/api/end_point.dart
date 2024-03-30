@@ -3,7 +3,7 @@ class EndPoint {
   static const String bestSellerBooksUrl =
       'volumes?Filtering=free-ebooks&Sorting=newest&q=computer science';
   static const String previewBooksUrl =
-      'volumes?Filtering=free-ebooks&q=subject:programming';
+      'volumes?Filtering=free-ebooks&q=programming';
   static const String similarBooksUrl =
-      'volumes?Filtering=free-ebooks&Sorting=relevance &q=subject:Programming';
+      'volumes?Filtering=free-ebooks&Sorting=relevance &q=';
 }
