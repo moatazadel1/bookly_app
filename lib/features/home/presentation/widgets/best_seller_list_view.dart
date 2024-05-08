@@ -29,21 +29,16 @@ class BestSellerListView extends StatelessWidget {
             child: CustomErrorWidget(errMessage: state.errMessage),
           );
         } else {
-          return ListView.separated(
-            padding: EdgeInsets.zero,
-            // shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return const Padding(
-                padding: EdgeInsets.only(left: 30, top: 20),
-                child: CustomBestSellerSkelton(),
-              );
-            },
-            separatorBuilder: (context, index) {
-              return const SizedBox(
-                height: 20,
-              );
-            },
-            itemCount: 10,
+          return SingleChildScrollView(
+            child: Column(
+              children: List.generate(
+                10,
+                (index) => const Padding(
+                  padding: EdgeInsets.only(left: 30, top: 20),
+                  child: CustomBestSellerSkelton(),
+                ),
+              ),
+            ),
           );
         }
       },
