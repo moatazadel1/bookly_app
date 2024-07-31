@@ -2,7 +2,7 @@ import 'package:bookly_app/core/utils/constants.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/core/models/book_model/book_model.dart';
 import 'package:bookly_app/core/utils/utils.dart';
-import 'package:bookly_app/features/home/presentation/widgets/custom_button_action.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/custom_button_action.dart';
 import 'package:flutter/material.dart';
 
 class BookActions extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:bookly_app/core/utils/app_colors.dart';
 import 'package:bookly_app/core/utils/app_routes.dart';
 import 'package:bookly_app/features/home/data/repos/home_repo_impl.dart';
-import 'package:bookly_app/features/home/logic/best_seller_books_cubit/best_seller_books_cubit.dart';
-import 'package:bookly_app/features/home/logic/preview_books_cubit/preview_books_cubit.dart';
+import 'package:bookly_app/features/home/presentation/logic/best_seller_books_cubit/best_seller_books_cubit.dart';
+import 'package:bookly_app/features/home/presentation/logic/preview_books_cubit/preview_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';

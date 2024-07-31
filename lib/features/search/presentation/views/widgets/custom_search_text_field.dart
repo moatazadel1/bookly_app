@@ -1,4 +1,4 @@
-import 'package:bookly_app/features/search/logic/search_cubit/search_cubit_cubit.dart';
+import 'package:bookly_app/features/search/presentation/logic/search_cubit/search_cubit_cubit.dart';
 import 'package:flutter/material.dart';
 
 class CustomSearchTextField extends StatefulWidget {

@@ -1,9 +1,9 @@
 import 'package:bookly_app/core/api/api_service.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/features/search/data/repos/search_repo_impl.dart';
-import 'package:bookly_app/features/search/logic/search_cubit/search_cubit_cubit.dart';
-import 'package:bookly_app/features/search/presentation/widgets/custom_search_text_field.dart';
-import 'package:bookly_app/features/search/presentation/widgets/search_results_list_view.dart';
+import 'package:bookly_app/features/search/presentation/logic/search_cubit/search_cubit_cubit.dart';
+import 'package:bookly_app/features/search/presentation/views/widgets/custom_search_text_field.dart';
+import 'package:bookly_app/features/search/presentation/views/widgets/search_results_list_view.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
